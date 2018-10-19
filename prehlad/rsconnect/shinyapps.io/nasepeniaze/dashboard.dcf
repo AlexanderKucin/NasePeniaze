@@ -1,0 +1,10 @@
+name: dashboard
+title:
+username:
+account: nasepeniaze
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 498547
+bundleId: 1628293
+url: https://nasepeniaze.shinyapps.io/dashboard/
+when: 1538942509.59007
