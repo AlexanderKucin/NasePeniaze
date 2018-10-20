@@ -142,6 +142,7 @@ data$suma_na_obyvatela2<- data$suma_spolu/data$obyvatelov2
 data_year<- readRDS('crz_data_new.rds')
 
 data_year<- bind_rows(data, data_year)
+data_year %<>% unique()
 
 # saving df with new data
 saveRDS(data_year, 'crz_data_new.rds')
