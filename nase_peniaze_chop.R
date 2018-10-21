@@ -278,4 +278,4 @@ write.table(topD,paste0(PATH,'/','topD.txt'),sep=";",quote=F, row.names=F)
 write.table(topM,paste0(PATH,'/','topM.txt'),sep=";",quote=F, row.names=F)
 
 #DEPLOY----------------------
-deployApp(PATH, appName = 'prehlad', launch.browser = F)
+deployApp(PATH, appName = 'prehlad', launch.browser = F, forceUpdate = T)
