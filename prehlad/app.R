@@ -49,9 +49,9 @@ daily$pSum<- paste(prettyNum(daily$suma,digits=2,big.mark = " ", scientific=F),"
 daily$pPoc<- paste(prettyNum(daily$pocet,digits=0,big.mark = " ", scientific=F)," zmlúv",sep=" ")
 daily$pAvg<- paste(prettyNum(daily$avg,digits=2,big.mark = " ", scientific=F),"€",sep=" ")
 title1<- format(daily$datum_zverejnene[2], format="%d.%m")
-sub1<- paste0("Zmena oproti ",format(daily$datum_zverejnene[1], format="%d.%m"),": ",round((daily$suma[2]/daily$suma[1])-1,2),"%")
-sub2<- paste0("Zmena oproti ",format(daily$datum_zverejnene[1], format="%d.%m"),": ",round((daily$pocet[2]/daily$pocet[1])-1,2),"%")
-sub3<- paste0("Zmena oproti ",format(daily$datum_zverejnene[1], format="%d.%m"),": ",round((daily$avg[2]/daily$avg[1])-1,2),"%")
+sub1<- paste0("Zmena oproti ",format(daily$datum_zverejnene[1], format="%d.%m"),": ",round((daily$suma[2]/daily$suma[1])-1,2)*100,"%")
+sub2<- paste0("Zmena oproti ",format(daily$datum_zverejnene[1], format="%d.%m"),": ",round((daily$pocet[2]/daily$pocet[1])-1,2)*100,"%")
+sub3<- paste0("Zmena oproti ",format(daily$datum_zverejnene[1], format="%d.%m"),": ",round((daily$avg[2]/daily$avg[1])-1,2)*100,"%")
 
 monthly<- as.data.frame(read_delim("monthly.txt", delim=";", col_types = cols("D","n","i","n")))
 monthly$pSum<- paste(prettyNum(monthly$suma,digits=2,big.mark = " ", scientific=F),"€",sep=" ")
@@ -59,9 +59,9 @@ monthly$pPoc<- paste(prettyNum(monthly$pocet,digits=0,big.mark = " ", scientific
 monthly$pAvg<- paste(prettyNum(monthly$avg,digits=2,big.mark = " ", scientific=F),"€",sep=" ")
 
 title2<- format(monthly$ym[2],"%m/%Y")
-sub4<- paste0("Zmena oproti ",format(monthly$ym[1],"%m/%Y"),": ",round((monthly$suma[2]/monthly$suma[1])-1,2),"%")
-sub5<- paste0("Zmena oproti ",format(monthly$ym[1],"%m/%Y"),": ",round((monthly$pocet[2]/monthly$pocet[1])-1,2),"%")
-sub6<- paste0("Zmena oproti ",format(monthly$ym[1],"%m/%Y"),": ",round((monthly$avg[2]/monthly$avg[1])-1,2),"%")
+sub4<- paste0("Zmena oproti ",format(monthly$ym[1],"%m/%Y"),": ",round((monthly$suma[2]/monthly$suma[1])-1,2)*100,"%")
+sub5<- paste0("Zmena oproti ",format(monthly$ym[1],"%m/%Y"),": ",round((monthly$pocet[2]/monthly$pocet[1])-1,2)*100,"%")
+sub6<- paste0("Zmena oproti ",format(monthly$ym[1],"%m/%Y"),": ",round((monthly$avg[2]/monthly$avg[1])-1,2)*100,"%")
 
 top10d<- as.data.frame(read_delim("topD.txt", delim=";", col_types = cols("c","c","c","c","D","D","n","c")))
 top10d$pSum<- paste(prettyNum(top10d$suma_spolu,digits=2,big.mark = " ", scientific=F),"€",sep=" ")
